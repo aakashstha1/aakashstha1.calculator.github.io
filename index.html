@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    @import url("https://fonts.cdnfonts.com/css/digital-numbers");
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin: 50px;
+    }
+
+    form {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    input {
+      margin: 5px;
+      padding: 30px;
+      font-size: 20px;
+    }
+
+    input[type="text"] {
+      width: 450px;
+      text-align: right;
+      background-color: rgb(235, 228, 228);
+      font-family: "Digital Numbers", sans-serif;
+      font-size: 40px;
+      border-radius: 5px;
+    }
+
+    input[type="button"] {
+      width: 90px;
+      background-color: hwb(26 5% 13%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #ea9f3d;
+    }
+
+    input:last-of-type {
+      width: 200px;
+      font-weight: bolder;
+    }
+    p {
+      margin: 10px;
+      font-size: 12px;
+    }
+  </style>
+  <body>
+    <form action="" name="forms">
+      <input type="text" name="answer" readonly />
+      <br />
+      <input type="button" value=" 9 " onclick="forms.answer.value += '9'" />
+      <input type="button" value=" 8 " onclick="forms.answer.value += '8'" />
+      <input type="button" value=" 7 " onclick="forms.answer.value += '7'" />
+      <input type="button" value=" A/C " onclick="forms.answer.value = ''" />
+      <input
+        type="button"
+        value=" Del "
+        onclick="forms.answer.value = forms.answer.value.slice(0,-1)"
+      />
+      <br />
+      <input type="button" value=" 6 " onclick="forms.answer.value += '6'" />
+      <input type="button" value=" 5 " onclick="forms.answer.value += '5'" />
+      <input type="button" value=" 4 " onclick="forms.answer.value += '4'" />
+      <input type="button" value=" * " onclick="forms.answer.value +='*'" />
+      <input type="button" value=" / " onclick="forms.answer.value +='/'" />
+      <br />
+      <input type="button" value=" 3 " onclick="forms.answer.value += '3'" />
+      <input type="button" value=" 2 " onclick="forms.answer.value += '2'" />
+      <input type="button" value=" 1 " onclick="forms.answer.value += '1'" />
+      <input type="button" value=" + " onclick="forms.answer.value += '+'" />
+      <input type="button" value=" - " onclick="forms.answer.value += '-'" />
+      <br />
+      <input type="button" value=" ." onclick="forms.answer.value += '.'" />
+      <input type="button" value=" 0 " onclick="forms.answer.value +='0'" />
+      <input
+        type="button"
+        value=" x² "
+        onclick="forms.answer.value = Math.pow(parseFloat(forms.answer.value),2)"
+      />
+      <input
+        type="button"
+        value=" Ans "
+        onclick="forms.answer.value= eval(forms.answer.value)"
+      />
+      <p>Designed By Aakash Shrestha</p>
+    </form>
+  </body>
+</html>
